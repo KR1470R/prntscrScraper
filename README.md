@@ -1,5 +1,5 @@
 # prntscrScraper
-Downloads random photos uploaded via Prntscr.
+Downloads random photos uploaded via Prntscr. ONLY LINUX!!!
 
 Usage:
 python code.py (amount of threads)
