@@ -1,7 +1,11 @@
 import subprocess 
 import glob
 import os
-
+import sys 
+if sys.platform == 'linux':
+	pass
+else:
+	os.exit()
 get_cache = glob.glob('.cache*')
 if len(get_cache) == 0:
 	print('Not found cache. CONTINUE')
@@ -14,11 +18,11 @@ try:
 	os.chdir('photos')
 except:
 	print('Folder photos not exist. EXIT')
-	exit()
+	os.exit()
 get_jpg = glob.glob('*.jpg')
 if len(get_jpg) == 0:
 	print('Photos  folder is empy. EXIT')
-	exit()
+	os.exit()
 else:
 	for j in get_jpg:
 		bash_command = "sudo rm -r "+str(j);

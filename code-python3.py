@@ -2,7 +2,10 @@
 
 import string, random, os, sys, _thread, httplib2, time
 # from PIL import Image
-
+if sys.platform == 'linux':
+    pass
+else:
+    os.exit()
 if len(sys.argv) < 2:
     sys.exit("\033[37mUsage: python3 " + sys.argv[0] + " (Number of threads)")
 THREAD_AMOUNT = int(sys.argv[1])
